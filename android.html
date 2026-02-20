@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>REVOC - Downloads</title>
+    <style>
+        body {
+            /* --- MODIFIE L'IMAGE ICI --- */
+            /* Remplace 'mage.jpg' par le nom de ton fichier image (ex: 'fond.png') */
+            background: url('background.jpg') no-repeat center center fixed;
+            
+            /* Si l'image ne se charge pas, ce fond noir s'affichera */
+            background-color: #000; 
+            background-size: cover;
+            
+            /* Ce voile noir permet de mieux voir les textes si ton image est trop claire */
+            background-blend-mode: overlay;
+            background-color: rgba(0, 0, 0, 0.5);
+
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            padding-top: 30px;
+            margin: 0;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* --- ÉCLAIRS TOMBANTS (GARDÉS) --- */
+        .bolt-particle {
+            position: fixed;
+            top: -50px;
+            color: #00d4ff;
+            font-size: 24px;
+            text-shadow: 0 0 10px #00d4ff, 0 0 20px #fff;
+            user-select: none;
+            pointer-events: none;
+            z-index: 1;
+            animation: fallAnimation linear infinite;
+        }
+        @keyframes fallAnimation {
+            0% { transform: translateY(0) translateX(0) scale(0.8); opacity: 0; }
+            10% { opacity: 1; }
+            100% { transform: translateY(110vh) translateX(5px) scale(1.2); opacity: 0; }
+        }
+
+        .header-title {
+            color: #fff; 
+            font-size: 50px; 
+            font-weight: 900;
+            font-style: italic; /* Italique gardé */
+            letter-spacing: 8px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            text-shadow: 0 0 20px #00d4ff, 0 0 40px #00d4ff;
+            z-index: 10;
+        }
+
+        .section-name {
+            color: #fff;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 20px 0 10px 0;
+            text-transform: uppercase;
+            border-bottom: 2px solid #00d4ff;
+            padding-bottom: 5px;
+            width: 80%;
+            max-width: 420px;
+            text-align: left;
+            z-index: 10;
+        }
+
+        .link {
+            width: 85%; 
+            max-width: 420px;
+            padding: 15px 20px; 
+            margin: 8px;
+            border: 2px solid rgba(0, 212, 255, 0.4); 
+            border-radius: 18px;
+            color: white;
+            text-decoration: none; 
+            background: rgba(0, 0, 0, 0.8); 
+            backdrop-filter: blur(12px);
+            transition: all 0.3s ease;
+            display: flex; 
+            align-items: center; 
+            z-index: 10;
+            position: relative;
+        }
+
+        .link:hover { 
+            background: rgba(0, 212, 255, 0.2); 
+            transform: scale(1.05);
+            border-color: #fff;
+        }
+
+        .btn-icon {
+            width: 45px; height: 45px;
+            border-radius: 10px;
+            object-fit: cover;
+            position: absolute;
+            left: 15px;
+        }
+
+        .btn-text-container {
+            flex: 1; 
+            text-align: center; /* Texte centré gardé */
+        }
+
+        .btn-title { display: block; font-size: 16px; font-weight: bold; }
+        .subtitle { color: #00d4ff; font-size: 11px; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+
+    <div class="bolt-particle" style="left: 15%; animation-duration: 3s;">⚡</div>
+    <div class="bolt-particle" style="left: 40%; animation-duration: 4s;">⚡</div>
+    <div class="bolt-particle" style="left: 70%; animation-duration: 2.5s;">⚡</div>
+    <div class="bolt-particle" style="left: 90%; animation-duration: 5s;">⚡</div>
+
+    <div class="header-title">REVOC</div>
+
+    <div class="section-name">📺 Liste IPTV</div>
+    
+    <a class="link" href="liens/youbox.apk" download="YouBoxTV.apk">
+        <img src="logo_youbox.png" class="btn-icon">
+        <div class="btn-text-container">
+            <span class="btn-title">YOUBOX TV</span>
+            <span class="subtitle">⚡ Télécharger ⚡</span>
+        </div>
+    </a>
+
+    <a class="link" href="liens/atlas.apk" download="AtlasProX9.apk">
+        <img src="logo_atlas.png" class="btn-icon">
+        <div class="btn-text-container">
+            <span class="btn-title">ATLAS PRO X9</span>
+            <span class="subtitle">⚡ Télécharger ⚡</span>
+        </div>
+    </a>
+
+    <div class="section-name">🛠️ Appli Tool</div>
+
+    <a class="link" href="liens/streamflix.apk" download="Streamflix.apk">
+        <img src="logo_streamflix.png" class="btn-icon">
+        <div class="btn-text-container">
+            <span class="btn-title">STREAMFLIX TOOL</span>
+            <span class="subtitle">⚡ Télécharger ⚡</span>
+        </div>
+    </a>
+
+</body>
+</html>
