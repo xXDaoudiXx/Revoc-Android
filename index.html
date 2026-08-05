@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ApkDaou - Downloads</title>
+    <style>
+        body {
+            background: url('image/background.jpg') no-repeat center center fixed;
+            background-color: #000; 
+            background-size: cover;
+            background-blend-mode: overlay;
+            background-color: rgba(0, 0, 0, 0.5);
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            padding-top: 30px;
+            margin: 0;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* --- ÉCLAIRS TOMBANTS --- */
+        .bolt-particle {
+            position: fixed;
+            top: -50px;
+            color: #00d4ff;
+            font-size: 24px;
+            text-shadow: 0 0 10px #00d4ff, 0 0 20px #fff;
+            user-select: none;
+            pointer-events: none;
+            z-index: 1;
+            animation: fallAnimation linear infinite;
+        }
+        @keyframes fallAnimation {
+            0% { transform: translateY(0) translateX(0) scale(0.8); opacity: 0; }
+            10% { opacity: 1; }
+            100% { transform: translateY(110vh) translateX(5px) scale(1.2); opacity: 0; }
+        }
+
+        .header-title {
+            color: #fff; 
+            font-size: 50px; 
+            font-weight: 900;
+            font-style: italic;
+            letter-spacing: 8px;
+            margin-bottom: 10px;
+            text-transform: none; 
+            text-shadow: 0 0 20px #00d4ff, 0 0 40px #00d4ff;
+            z-index: 10;
+        }
+
+        /* --- DESCRIPTION --- */
+        .description-box {
+            color: #ffffff;
+            text-align: center;
+            font-size: 16px;
+            font-style: italic;
+            max-width: 600px;
+            margin: 10px auto 25px auto;
+            padding: 0 20px;
+            text-shadow: 0 0 8px #00d4ff;
+            z-index: 10;
+            line-height: 1.4;
+        }
+
+        /* --- CONTENEUR DES 2 COLONNES (Carrés agrandis) --- */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px; 
+            width: 90%;
+            max-width: 540px; /* Augmenté pour des carrés plus grands */
+            z-index: 10;
+            margin-bottom: 50px;
+        }
+
+        .link {
+            aspect-ratio: 1 / 1; /* Carrés */
+            padding: 20px; /* Légèrement augmenté pour l'harmonie */
+            border: 2px solid rgba(0, 212, 255, 0.4); 
+            border-radius: 18px;
+            color: white;
+            text-decoration: none; 
+            background: rgba(0, 0, 0, 0.85); 
+            backdrop-filter: blur(12px);
+            transition: all 0.3s ease;
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .link:hover { 
+            background: rgba(0, 0, 0, 0.95);
+            transform: scale(1.05);
+            border-color: #00d4ff; 
+            box-shadow: 0 0 20px #00d4ff, inset 0 0 10px #00d4ff; 
+        }
+
+        .btn-icon {
+            width: 68px; /* Agrandit l'icône proportionnellement */
+            height: 68px;
+            border-radius: 14px;
+            object-fit: cover;
+            margin-bottom: 12px;
+            box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+        }
+
+        .btn-text-container {
+            width: 100%;
+            margin-top: 30px; /* Ajuste cette valeur pour descendre tout le bloc texte (titre + téléchargement) */
+        }
+
+        .btn-title { 
+            display: block; 
+            font-size: 15px; 
+            font-weight: bold; 
+            margin-bottom: 35px; /* Ajuste cette valeur pour éloigner le bouton "Télécharger" du titre */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .subtitle { 
+            color: #00d4ff; 
+            font-size: 15px; /* Légèrement ajusté */
+            text-transform: uppercase; 
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(0,212,255,0.5);
+        }
+
+        /* Sur très petit écran, bascule sur 1 seule colonne */
+        @media (max-width: 480px) {
+            .grid-container {
+                grid-template-columns: repeat(1, 1fr);
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bolt-particle" style="left: 15%; animation-duration: 3s;">🎬</div>
+    <div class="bolt-particle" style="left: 40%; animation-duration: 4s;">🎬</div>
+    <div class="bolt-particle" style="left: 70%; animation-duration: 2.5s;">🎬</div>
+    <div class="bolt-particle" style="left: 90%; animation-duration: 5s;">🎬</div>
+
+    <div class="header-title">ZimaOS Serveur</div>
+
+    <div class="description-box">
+        Liens Direct De Téléchargement 
+    </div>
+    
+    <div class="grid-container">
+        <a class="link" href="http://192.168.1.69:5005/HDD-4To/Apk/JellyFin V2.6.3.apk" download="𝐂𝐨𝐯𝐞𝐫 𝐓𝐯 𝐏𝐥𝐚𝐲𝐞𝐫">
+            <img src="image/jellyfin.png" class="btn-icon">
+            <div class="btn-text-container">
+                <span class="btn-title">𝐉𝐞𝐥𝐥𝐲𝐅𝐢𝐧 𝐀𝐧𝐝𝐫𝐨𝐢𝐝</span>
+                <span class="subtitle">⚡ Télécharger ⚡</span>
+            </div>
+        </a>
+
+        <a class="link" href="http://192.168.1.69:5005/HDD-4To/Apk/Tailscale V1.96.4.apk" download="𝐈𝐩𝐭𝐯 𝐒𝐦𝐚𝐫𝐭𝐞𝐫 𝐏𝐫𝐨">
+            <img src="image/tescal.png" class="btn-icon">
+            <div class="btn-text-container">
+                <span class="btn-title">𝐓𝐚𝐢𝐥𝐬𝐜𝐚𝐥𝐞 𝐀𝐧𝐝𝐫𝐨𝐢𝐝</span>
+                <span class="subtitle">⚡ Télécharger ⚡</span>
+            </div>
+        </a>
+        
+        <a class="link" href="downloads/𝐀𝐝𝐆𝐮𝐚𝐫𝐝 𝐏𝐫𝐨 𝟒.𝟏𝟒.𝟑𝟓.apk" download="𝐀𝐝𝐆𝐮𝐚𝐫𝐝 𝐏𝐫𝐨">
+            <img src="image/jellyfin.png" class="btn-icon">
+            <div class="btn-text-container">
+                <span class="btn-title">𝐉𝐞𝐥𝐥𝐲𝐅𝐢𝐧 𝐖𝐢𝐧𝐝𝐨𝐰𝐬</span>
+                <span class="subtitle">⚡ Télécharger ⚡</span>
+            </div>
+        </a>
+        
+        <a class="link" href="downloads/𝐀𝐥𝐟𝐫𝐞𝐝𝐂𝐚𝐦𝐞𝐫𝐚 𝐕𝟐𝟎𝟐𝟓.𝟐𝟒.𝟏.apk" download="𝐀𝐥𝐟𝐫𝐞𝐝𝐂𝐚𝐦𝐞𝐫𝐚 𝐏𝐫𝐨">
+            <img src="image/tescal.png" class="btn-icon">
+            <div class="btn-text-container">
+                <span class="btn-title">𝐓𝐚𝐢𝐥𝐬𝐜𝐚𝐥𝐞 𝐖𝐢𝐧𝐝𝐨𝐰𝐬</span>
+                <span class="subtitle">⚡ Télécharger ⚡</span>
+            </div>
+        </a>
+        
+        <a class="link" href="downloads/𝐀𝐩𝐤 𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐨𝐫 - 𝐯𝟒.𝟐.𝟏.apk" download="𝐀𝐩𝐤 𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐨𝐫">
+            <img src="image/jellyfin.png" class="btn-icon">
+            <div class="btn-text-container">
+                <span class="btn-title">𝐉𝐞𝐥𝐥𝐲𝐅𝐢𝐧 𝐅𝐢𝐫𝐞𝐓𝐯</span>
+                <span class="subtitle">⚡ Télécharger ⚡</span>
+            </div>
+        </a>
+        
+        <a class="link" href="downloads/𝐁𝐥𝐨𝐤𝐚𝐝𝐚 𝟓 𝐏𝐫𝐨 𝐯𝟐𝟑.𝟐.𝟏.apk" download="𝐁𝐥𝐨𝐤𝐚𝐝𝐚 𝟓 𝐏𝐫𝐨">
+            <img src="image/tescal.png" class="btn-icon">
+            <div class="btn-text-container">
+                <span class="btn-title">𝐓𝐚𝐢𝐥𝐬𝐜𝐚𝐥𝐞 𝐅𝐢𝐫𝐞𝐓𝐯</span>
+                <span class="subtitle">⚡ Télécharger ⚡</span>
+            </div>
+
+</body>
+</html>
